@@ -7,7 +7,8 @@ help:
 
 setup: \
 	dependencies \
-	deps/vim/vim
+	deps/vim/vim \
+	deps/ggalindezb/vim_colorscheme_template
 
 dependencies:
 	@type docker > /dev/null
@@ -20,14 +21,22 @@ bash:
 		-it \
 		--rm \
 		-v $(PWD):/work \
-		-v $(PWD)/.vim:/root/.vim \
-		-v $(PWD)/.vimrc:/root/.vimrc \
+		-e TERM=xterm-256color \
 		-w /work \
 		$(NAME) \
 		bash
 
-deps/vim/vim: deps
-	git clone git@github.com:vim/vim.git -b v8.2.1860 --single-branch --depth 1 $@
+deps/vim/vim: deps/vim
+	[[ ! -d $@ ]] && git clone git@github.com:vim/vim.git -b v8.2.1860 --single-branch --depth 1 $@
+
+deps/ggalindezb/vim_colorscheme_template: deps/ggalindezb
+	[[ ! -d $@ ]] && git clone git@github.com:ggalindezb/vim_colorscheme_template.git $@
+
+deps/vim: deps
+	mkdir -p $@
+
+deps/ggalindezb:
+	mkdir -p $@
 
 deps:
 	mkdir -p $@
