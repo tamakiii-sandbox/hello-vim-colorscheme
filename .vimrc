@@ -1,8 +1,11 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'file://'.expand('/work')
+" Plug 'lifepillar/vim-colortemplate'
+" Plug 'KevinGoodsell/vim-color-check'
+" Plug 'file://'.expand('/work')
 
 call plug#end()
 
-
-colorscheme "colorscheme"
+" :runtime syntax/colortest.vim
+" :runtime syntax/hitest.vim
+colorscheme test

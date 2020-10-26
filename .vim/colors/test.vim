@@ -7,6 +7,6 @@ if version > 580
 endif
 
 set t_Co=256
-let g:colors_name = "colorscheme"
+let g:colors_name = "test"
 
 hi Normal guifg=#c0b1c2 guibg=#152126 guisp=#152126 gui=NONE ctermfg=7 ctermbg=235 cterm=NONE
