@@ -1,4 +1,6 @@
-.PHONY: help setup dependencies colors syntaxes clean
+.PHONY: help setup dependencies colors syntaxes info clean
+
+VIM := vim
 
 help:
 	@cat $(firstword $(MAKEFILE_LIST))
@@ -21,10 +23,13 @@ setup: \
 	mkdir -p $@
 
 colors:
-	vim -R -p $(realpath $(shell vim -es -c 'redir @x|echo $$VIMRUNTIME|redir END|put x' -c 'norm gg2dd' -c '%p|q!'))/colors/*.vim
+	$(VIM) -R -p $(realpath $(shell $(VIM) -es -c 'redir @x|echo $$VIMRUNTIME|redir END|put x' -c 'norm gg2dd' -c '%p|q!'))/colors/*.vim
 
 syntaxes:
-	vim -R -p $(realpath $(shell vim -es -c 'redir @x|echo $$VIMRUNTIME|redir END|put x' -c 'norm gg2dd' -c '%p|q!'))/syntax/*.vim
+	$(VIM) -R -p $(realpath $(shell $(VIM) -es -c 'redir @x|echo $$VIMRUNTIME|redir END|put x' -c 'norm gg2dd' -c '%p|q!'))/syntax/*.vim
+
+info:
+	@echo "VIMRUNTIME=$(shell vim -es -c 'redir @x|echo $$VIMRUNTIME|redir END|put x' -c 'norm gg2dd' -c '%p|q!')"
 
 clean:
 	rm -rf ~/.vim/autoload:
