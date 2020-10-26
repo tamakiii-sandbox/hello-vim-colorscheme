@@ -53,14 +53,16 @@ call plug#begin('~/.vim/plugged')
 " Plug 'lifepillar/vim-colortemplate'
 " Plug 'KevinGoodsell/vim-color-check'
 " Plug 'file://'.expand('/work')
+Plug 'guns/xterm-color-table.vim'
 
 call plug#end()
 
 " Shortcuts
-nmap <LEADER>r :source $HOME/.vimrc<CR>
-nmap <LEADER>ct :runtime syntax/colortest.vim<CR>
-nmap <LEADER>ht :runtime syntax/hitest.vim<CR>
+nmap <C-x>r :source $HOME/.vimrc<CR>
+nmap <C-x>ct :runtime syntax/colortest.vim<CR>
+nmap <C-x>ht :runtime syntax/hitest.vim<CR>
 
 " :runtime syntax/colortest.vim
 " :runtime syntax/hitest.vim
+" autocmd ColorScheme * highlight LineNr ctermbg=1 guibg=#ff0000
 colorscheme test
