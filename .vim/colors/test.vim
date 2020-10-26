@@ -1,10 +1,5 @@
-" Vim colorscheme template file
-" Author: tamakiii <tamakiii@users.noreply.github.com>
-" Maintainer: tamakiii <tamakiii@users.noreply.github.com>
-" Note: https://vim-jp.org/vimdoc-en/syntax.html
-
 let g:colors_name = "test"
-set background=dark " or light
+set background=dark " hi or light
 
 if version > 580
   hi clear
@@ -14,115 +9,123 @@ if version > 580
 endif
 
 " Editor settings
-hi clear Normal            " Normal            term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear Cursor            " Cursor            term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear CursorLine        " CursorLine        term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear LineNr            " LineNr            term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear CursorLineNR      " CursorLineNR      term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi Normal                 guifg=#d0c0d0
+hi clear Cursor            " hi Cursor            term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi CursorLine                                                                                                                     guifg=#767676    guibg=#ff0000
+hi LineNr                                                                                                                         guifg=#767676
+hi clear CursorLineNR      " hi CursorLineNR      term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+"hi CursorLineNR                                                                                                                   guifg=#767676    guibg=#ff0000
 
 " Number column
-hi clear CursorColumn      " CursorColumn      term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear FoldColumn        " FoldColumn        term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear SignColumn        " SignColumn        term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear Folded            " Folded            term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear CursorColumn      " hi CursorColumn      term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear FoldColumn        " hi FoldColumn        term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear SignColumn        " hi SignColumn        term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear Folded            " hi Folded            term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
 
 " Window/Tab delimiters
-hi clear VertSplit         " VertSplit         term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear ColorColumn       " ColorColumn       term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear TabLine           " TabLine           term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear TabLineFill       " TabLineFill       term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear TabLineSel        " TabLineSel        term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi VertSplit cterm=bold guifg=#000000    guibg=#2B2D4D
+hi clear ColorColumn       " hi ColorColumn       term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi TabLine                                                                                                       gui=none         guifg=#a9b1d6    guibg=#2B2D4D
+hi clear TabLineFill       " hi TabLineFill       term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi TabLineSel                                                                                                    gui=bold         guifg=#00ffff    guibg=#0000ff
 
 " File Navigation / Searching
-hi clear Directory         " Directory         term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear Search            " Search            term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear IncSearch         " IncSearch         term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear Directory         " hi Directory         term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi Search                                                                                                                         guifg=#ffff00    guibg=#0000ff
+"hi Search                                                                                                                         guifg=#0000ff    guibg=#ffff00
+hi clear IncSearch         " hi IncSearch         term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
 
 " Prompt/Status
-hi clear StatusLine        " StatusLine        term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear StatusLineNC      " StatusLineNC      term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear WildMenu          " WildMenu          term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear Question          " Question          term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear Title             " Title             term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear ModeMsg           " ModeMsg           term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear MoreMsg           " MoreMsg           term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi StatusLine                                                     cterm=bold                                                      guifg=#00ffff    guibg=#0000ff
+hi StatusLineNC                                                   cterm=none                                                      guifg=#a9b1d6    guibg=#2B2D4D
+hi clear StatusLineTerm    " hi StatusLineTerm    term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear StatusLineTermNC  " hi StatusLineTermNC  term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear WildMenu          " hi WildMenu          term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear Question          " hi Question          term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear Title             " hi Title             term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear ModeMsg           " hi ModeMsg           term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear MoreMsg           " hi MoreMsg           term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
 
 " Visual aid
-hi clear MatchParen        " MatchParen        term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear Visual            " Visual            term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear VisualNOS         " VisualNOS         term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear NonText           " NonText           term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear Todo              " Todo              term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear Underlined        " Underlined        term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear Error             " Error             term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear ErrorMsg          " ErrorMsg          term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear WarningMsg        " WarningMsg        term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear Ignore            " Ignore            term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear SpecialKey        " SpecialKey        term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear MatchParen        " hi MatchParen        term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi Visual term=reverse guifg=#1a2124 guibg=#00ffff
+hi clear VisualNOS         " hi VisualNOS         term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear NonText           " hi NonText           term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear Todo              " hi Todo              term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear Underlined        " hi Underlined        term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear Error             " hi Error             term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear ErrorMsg          " hi ErrorMsg          term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear WarningMsg        " hi WarningMsg        term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear Ignore            " hi Ignore            term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear SpecialKey        " hi SpecialKey        term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
 
 " Variable types
-hi clear Constant          " Constant          term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear String            " String            term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear StringDelimiter   " StringDelimiter   term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear Character         " Character         term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear Number            " Number            term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear Boolean           " Boolean           term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear Float             " Float             term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear Identifier        " Identifier        term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear Function          " Function          term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear Constant          " hi Constant          term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear String            " hi String            term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi String                                         ctermfg=115 guifg=#5fdfaf
+hi clear StringDelimiter   " hi StringDelimiter   term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear Character         " hi Character         term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear Number            " hi Number            term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear Boolean           " hi Boolean           term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear Float             " hi Float             term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi Identifier                                                     cterm=bold                                                      guifg=#556a92
+hi Function                                       cterm=bold                                                                      guifg=#875fff
 
 " Language constructs
-hi clear Statement         " Statement         term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear Conditional       " Conditional       term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear Repeat            " Repeat            term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear Label             " Label             term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear Operator          " Operator          term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear Keyword           " Keyword           term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear Exception         " Exception         term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear Comment           " Comment           term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear Special           " Special           term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear SpecialChar       " SpecialChar       term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear Tag               " Tag               term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear Delimiter         " Delimiter         term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear SpecialComment    " SpecialComment    term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear Debug             " Debug             term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi Statement                                                      cterm=bold                                                      guifg=#cc3080
+hi clear Conditional       " hi Conditional       term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear Repeat            " hi Repeat            term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear Label             " hi Label             term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi Operator                                                       cterm=bold      ctermfg=166                                                     guifg=#ff5f00
+hi Keyword                                                        cterm=bold                                                      guifg=#5fdf00
+hi clear Exception         " hi Exception         term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi Comment                                                        cterm=bold                                                      guifg=#616f73
+hi clear Special           " hi Special           term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear SpecialChar       " hi SpecialChar       term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear Tag               " hi Tag               term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear Delimiter         " hi Delimiter         term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear SpecialComment    " hi SpecialComment    term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear Debug             " hi Debug             term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
 
 " C like
-hi clear PreProc           " PreProc           term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear Include           " Include           term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear Define            " Define            term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear Macro             " Macro             term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear PreCondit         " PreCondit         term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear Type              " Type              term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear StorageClass      " StorageClass      term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear Structure         " Structure         term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear Typedef           " Typedef           term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi PreProc                                                        cterm=bold                                                      guifg=#556a92
+hi clear Include           " hi Include           term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear Define            " hi Define            term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear Macro             " hi Macro             term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear PreCondit         " hi PreCondit         term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi Type                                                           cterm=bold                                                      guifg=#0087ff
+hi clear StorageClass      " hi StorageClass      term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear Structure         " hi Structure         term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear Typedef           " hi Typedef           term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
 
 " Diff
-hi clear DiffAdd           " DiffAdd           term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear DiffChange        " DiffChange        term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear DiffDelete        " DiffDelete        term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear DiffText          " DiffText          term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear DiffAdd           " hi DiffAdd           term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear DiffChange        " hi DiffChange        term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear DiffDelete        " hi DiffDelete        term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear DiffText          " hi DiffText          term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
 
 " Completion menu
-hi clear Pmenu             " Pmenu             term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear PmenuSel          " PmenuSel          term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear PmenuSbar         " PmenuSbar         term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear PmenuThumb        " PmenuThumb        term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi Pmenu guifg=#ffffff    guibg=NONE
+hi PmenuSel  cterm=bold guifg=#00ffff    guibg=#0000ff
+hi PmenuSbar guifg=#00ffff    guibg=#0000ff
+hi PmenuThumb guifg=#00ffff    guibg=#0000ff
 
 " Spelling
-hi clear SpellBad          " SpellBad          term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear SpellCap          " SpellCap          term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear SpellLocal        " SpellLocal        term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear SpellRare         " SpellRare         term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-
-" Status line
-hi clear StatusLineTerm    " StatusLineTerm    term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear StatusLineTermNC  " StatusLineTermNC  term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear SpellBad          " hi SpellBad          term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear SpellCap          " hi SpellCap          term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear SpellLocal        " hi SpellLocal        term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear SpellRare         " hi SpellRare         term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
 
 " Tool bar
-hi clear ToolbarLine       " ToolbarLine       term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
-hi clear ToolbarButton     " ToolbarButton     term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear ToolbarLine       " hi ToolbarLine       term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear ToolbarButton     " hi ToolbarButton     term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
 
 " Etc
-hi clear Conceal           " Conceal           term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+hi clear Conceal           " hi Conceal           term=none       cterm=none      ctermfg=none  ctermbg=none     gui=none         guifg=none       guibg=none       guisp=none
+
+
+" syntax/diff
+hi DiffRemoved guifg=#ff0000
+hi DiffAdded guifg=#5fdf00
+hi diffFile cterm=bold guifg=#759fad
+hi diffIndexLine guifg=#00ffff    guibg=#0000ff
