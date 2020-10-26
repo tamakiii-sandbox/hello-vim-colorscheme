@@ -18,8 +18,10 @@ RUN rm -rf /tmp/vim && \
     apt-get clean
 
 RUN apt update && \
-    apt install -y \
+    apt install -y --no-install-recommends \
       make \
+      curl \
+      git \
       locales \
       less \
       && \
