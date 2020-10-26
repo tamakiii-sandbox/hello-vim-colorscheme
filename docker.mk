@@ -20,6 +20,8 @@ bash:
 		-it \
 		--rm \
 		-v $(PWD):/work \
+		-v $(PWD)/.vim:/root/.vim \
+		-v $(PWD)/.vimrc:/root/.vimrc \
 		-w /work \
 		$(NAME) \
 		bash
